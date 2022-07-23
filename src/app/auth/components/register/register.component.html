@@ -7,13 +7,14 @@
           <a [routerLink]="['/login']"> Have an account?</a>
         </p>
         Backends errors are here
-        <form>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
           <fieldset>
             <fieldset class="form-group">
               <input
                 type="text"
                 class="form-control form-control-lg"
                 placeholder="Username"
+                formControlName="username"
               />
             </fieldset>
 
@@ -22,6 +23,7 @@
                 type="text"
                 class="form-control form-control-lg"
                 placeholder="Email"
+                formControlName="email"
               />
             </fieldset>
 
@@ -30,6 +32,7 @@
                 type="password"
                 class="form-control form-control-lg"
                 placeholder="Password"
+                formControlName="password"
               />
             </fieldset>
           </fieldset>
