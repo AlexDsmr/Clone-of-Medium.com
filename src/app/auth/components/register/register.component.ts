@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { registerAction } from '../../store/action/register.action';
 
 @Component({
   selector: 'mc-register',
@@ -9,7 +11,7 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 export class RegisterComponent implements OnInit {
   form!: UntypedFormGroup;
 
-  constructor(private fb: UntypedFormBuilder) {}
+  constructor(private fb: UntypedFormBuilder, private store: Store) {}
 
   ngOnInit(): void {
     this.initializeForm()
@@ -25,5 +27,6 @@ export class RegisterComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.form.value)
+    this.store.dispatch(registerAction(this.form.value))
   }
 }
