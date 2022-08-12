@@ -12,11 +12,16 @@ import { AuthService } from './services/auth.service';
 import { reducers } from './store/reducers';
 import { RegisterEffect } from './store/effects/register.effects';
 import { LoginEffect } from './store/effects/login.effects';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   {
     path: 'register',
-    component: RegisterComponent,
+    component: RegisterComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
 ];
 
@@ -29,7 +34,7 @@ const routes: Routes = [
     EffectsModule.forFeature([RegisterEffect, LoginEffect]),
     BackendErrorMessagesModule
   ],
-  declarations: [RegisterComponent],
+  declarations: [RegisterComponent, LoginComponent],
   providers: [AuthService, PersistanceService]
 })
 export class AuthModule {}
