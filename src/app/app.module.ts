@@ -10,9 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { GlobalFeedModule } from './globalFeed/globalFeed.module';
-import { TopBarModule } from './shared/types/modules/topBar/topBar.module';
-import { AuthInterceptor } from './shared/types/services/authInterceptor.service';
-import { PersistanceService } from './shared/types/services/persistance.service';
+import { TopBarModule } from './shared/modules/topBar/topBar.module';
+import { AuthInterceptor } from './shared/services/authInterceptor.service';
+import { PersistanceService } from './shared/services/persistance.service';
 
 @NgModule({
   declarations: [

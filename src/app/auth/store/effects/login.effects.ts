@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { Actions, createEffect, ofType } from "@ngrx/effects";
 import { switchMap, map, catchError, of, tap } from "rxjs";
 import { CurrentUserInterface } from "src/app/shared/types/currentUser.interface";
-import { PersistanceService } from "src/app/shared/types/services/persistance.service";
+import { PersistanceService } from "src/app/shared/services/persistance.service";
 import { AuthService } from "../../services/auth.service";
 import { loginAction, loginSuccessAction, loginFailureAction } from "../action/login.action";
 

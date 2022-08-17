@@ -6,8 +6,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 
 import { RegisterComponent } from 'src/app/auth/components/register/register.component';
-import { BackendErrorMessagesModule } from '../shared/types/modules/backendErrorMessages/backendErrorMessages.module';
-import { PersistanceService } from '../shared/types/services/persistance.service';
+import { BackendErrorMessagesModule } from '../shared/modules/backendErrorMessages/backendErrorMessages.module';
+import { PersistanceService } from '../shared/services/persistance.service';
 import { AuthService } from './services/auth.service';
 import { reducers } from './store/reducers';
 import { RegisterEffect } from './store/effects/register.effects';
