@@ -13,7 +13,8 @@ import { reducers } from "./store/reducers";
     imports: [
         CommonModule,
         EffectsModule.forFeature([GetFeedEffect]),
-        StoreModule.forFeature('feed', reducers)
+        StoreModule.forFeature('feed', reducers),
+        RouterModule
     ],
     declarations: [FeedComponent],
     exports: [FeedComponent],
