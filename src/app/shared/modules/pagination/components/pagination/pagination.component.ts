@@ -25,7 +25,7 @@ ngOnInit(): void {
 preparePagesArray() {
   if(this.totalProps){
     this.pagesCount = Math.ceil(this.totalProps / this.limitProps)
-    this.pages = this.utilsService.range(1, 50)
+    this.pages = this.utilsService.range(1, this.pagesCount)
   }
 }
 
